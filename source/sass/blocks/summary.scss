@@ -1,0 +1,22 @@
+.summary {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 239px;
+}
+
+.summary__route {
+  margin-right: 100px;
+}
+
+.summary__photo {
+  height: 596px;
+}
+
+.summary__feedback {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

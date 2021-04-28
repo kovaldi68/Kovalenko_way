@@ -1,0 +1,26 @@
+.place-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.place-card__name {
+  margin: 0;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  padding: 16px;
+  min-width: 215px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  background-color: $white-basic;
+  transform: translateX(-50%);
+}
+
+.place-card__photo {
+  height: 430px;
+  max-width: 350px;
+}

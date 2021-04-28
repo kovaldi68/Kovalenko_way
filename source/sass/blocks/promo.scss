@@ -1,7 +1,29 @@
 .promo {
-  padding: 300px;
+  padding-top: 185px;
+  padding-bottom: 296px;
   background-image: url('../img/background-main.jpg');
-  background-size: cover 860px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
+  color: $white-basic;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 30px;
+  max-width: 412px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+}
+
+.promo__text {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
+  max-width: 376px;
+}
+
+.promo__button {
+  min-width: 340px;
 }

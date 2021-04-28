@@ -1,0 +1,22 @@
+.route {
+  width: 31.6%;
+}
+
+.route__title {
+  margin: 0;
+  margin-bottom: 53px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+}
+
+.route__text {
+  margin: 0;
+  margin-bottom: 50px;
+  color: $blue-dark-main-opacity-70;
+  letter-spacing: -0.47px;
+}
+
+.route__buy-button {
+  min-width: 250px;
+}

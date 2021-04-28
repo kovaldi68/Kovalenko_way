@@ -1,0 +1,8 @@
+.country-info {
+  display: none;
+  position: relative;
+
+  &--current {
+    display: block;
+  }
+}
