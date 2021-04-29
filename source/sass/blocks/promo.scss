@@ -25,5 +25,22 @@
 }
 
 .promo__button {
+  position: relative;
+  padding-right: 64px;
   min-width: 340px;
+  justify-content: left;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    width: 14px;
+    height: 14px;
+    background-image: url('../img/icons/arrow-down-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    transform: translateY(-50%);
+  }
 }

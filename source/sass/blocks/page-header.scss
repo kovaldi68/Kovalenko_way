@@ -27,13 +27,14 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     width: 30px;
     height: 30px;
-    background-image: url('/source/img/phone.svg');
+    background-image: url('../img/icons/phone.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px;
+    transform: translateY(-50%);
   }
 }

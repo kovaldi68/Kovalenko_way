@@ -1,0 +1,35 @@
+.contact-us {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-us__text {
+  margin-bottom: 13px;
+  padding-left: 50px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: $blue-darkest-text;
+}
+
+.contact-us__tel {
+  position: relative;
+  color: $black-basic;
+  font-size: 20px;
+  line-height: 32px;
+  padding-left: 50px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/icons/phone-orange.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    transform: translateY(-50%);
+  }
+}

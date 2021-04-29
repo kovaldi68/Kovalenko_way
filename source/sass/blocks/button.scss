@@ -11,5 +11,12 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
+  text-transform: uppercase;
   color: $white-basic;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $orange-hover;
+  }
 }
