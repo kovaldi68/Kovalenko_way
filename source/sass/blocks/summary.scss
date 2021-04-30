@@ -1,7 +1,6 @@
 .summary {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 239px;
 }
@@ -12,6 +11,7 @@
 
 .summary__photo {
   height: 596px;
+  max-width: 430px;
 }
 
 .summary__feedback {

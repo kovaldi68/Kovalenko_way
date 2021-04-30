@@ -1,6 +1,6 @@
 .page-header {
-  padding-top: 39px;
-  padding-bottom: 39px;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 
 .page-header__container {
@@ -17,24 +17,25 @@
 }
 
 .page-header__user-link {
-  position: relative;
-  padding-left: 36px;
-  font-size: 14px;
-  line-height: 17px;
-  color: $blue-darkest-text;
-  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  margin-right: 11px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    background-image: url('../img/icons/phone.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30px;
-    transform: translateY(-50%);
+  &--tel {
+    font-size: 18px;
+    line-height: 32px;
+    color: $blue-darkest-text;
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange-main;
+  }
+}
+
+.page-header__icon {
+  &--phone {
+    margin-right: 6px;
   }
 }

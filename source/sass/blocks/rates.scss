@@ -1,6 +1,7 @@
 .rates {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: center;
 }
 
 .rates__info {
@@ -10,11 +11,24 @@
 }
 
 .rates__title {
+  position: relative;
   margin: 0;
-  margin-bottom: 53px;
+  margin-top: 35px;
+  margin-bottom: 33px;
+  padding-bottom: 20px;
   font-weight: 600;
   font-size: 55px;
   line-height: 90px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 62%;
+    height: 3px;
+    background-color: $orange-main;
+  }
 }
 
 .rates__description {

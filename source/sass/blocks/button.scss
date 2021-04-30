@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 30px 40px;
-  background-color: $orange-button;
+  background-color: $orange-main;
   border-style: none;
   border-radius: 0;
   cursor: pointer;
@@ -18,5 +18,33 @@
   &:focus,
   &:active {
     background-color: $orange-hover;
+  }
+
+  &--form {
+    padding-top: 18px;
+    padding-bottom: 17px;
+    padding-left: 48px;
+    padding-right: 48px;
+    min-width: 176px;
+  }
+
+  &--close {
+    position: absolute;
+    top: 33px;
+    right: 15px;
+    padding: 0;
+    background-color: transparent;
+    width: 22px;
+    height: 22px;
+    background-image: url('../img/icons/modal-cross.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+    }
   }
 }

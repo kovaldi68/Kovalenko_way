@@ -1,0 +1,129 @@
+.form {
+  &--question {
+    margin-left: auto;
+    width: 56%;
+
+    .form__wrapper {
+      justify-content: center;
+      padding: 50px;
+      border-radius: 5px;
+      box-shadow: $feedback-form-shadow;
+      background-color: $white-basic;
+    }
+
+    .form__input-wrapper {
+      margin-bottom: 25px;
+      width: calc(50% - 10px);
+
+      &--tel {
+        margin-right: 19px;
+      }
+    }
+  }
+
+  &--buy {
+    position: absolute;
+    width: 38vw;
+    height: 35vh;
+    background-color: $grey;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+
+    .form__wrapper {
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      padding: 5%;
+      width: 58%;
+      background-color: $grey;
+    }
+
+    .form__title {
+      margin-bottom: 50px;
+    }
+
+    .form__description {
+      display: none;
+    }
+
+    .form__input-wrapper {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  color: $blue-darkest-text;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 11px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.form__description {
+  margin: 0;
+  margin-bottom: 24px;
+  width: 100%;
+  line-height: 24px;
+  text-align: center;
+}
+
+.form__input-wrapper {
+  position: relative;
+}
+
+.form__label {
+  &--tel {
+    position: relative;
+
+    &::before {
+      content: '+7';
+      position: absolute;
+      top: 51%;
+      left: 26px;
+      font-size: 14px;
+      line-height: 17px;
+      color: $blue-darkest-text;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.form__input {
+  width: 100%;
+  min-width: 190px;
+  padding: 16px 15px 15px 15px;
+  border: 1px solid $blue-dark-main-opacity-30;
+
+  &--tel {
+    padding-left: 51px;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $blue-darkest-text;
+  }
+
+  &:required + span {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: $orange-main;
+  }
+}
+

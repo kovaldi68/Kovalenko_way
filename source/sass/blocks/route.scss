@@ -3,11 +3,23 @@
 }
 
 .route__title {
+  position: relative;
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 33px;
+  padding-bottom: 20px;
   font-weight: 600;
   font-size: 55px;
   line-height: 90px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 49%;
+    height: 3px;
+    background-color: $orange-main;
+  }
 }
 
 .route__text {

@@ -4,11 +4,23 @@
 }
 
 .places__title {
-  margin-bottom: 64px;
+  position: relative;
+  margin-bottom: 34px;
+  padding-bottom: 30px;
   max-width: 358px;
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 66%;
+    height: 4px;
+    background-color: $orange-main;
+  }
 }
 
 .places__description {
@@ -21,7 +33,7 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   row-gap: 100px;
 }
 
@@ -29,6 +41,10 @@
   margin-right: 60px;
 
   &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  &:last-child {
     margin-right: 0;
   }
 }

@@ -22,28 +22,36 @@
       <nav class='page-header__nav navigation'>
         <ul class='navigation__list'>
           <li class='navigation__item'>
-            <a class='navigation__link' href='#'>О путешествии</a>
+            <a class='navigation__link' href='#travel-places'>О путешествии</a>
           </li>
           <li class='navigation__item'>
-            <a class='navigation__link' href='#'>Цены</a>
+            <a class='navigation__link' href='#prices'>Цены</a>
           </li>
         </ul>
       </nav>
-      <a class='page-header__user-link' href='tel:+7(499)-784-684-46'>+7(499)-784-684-46</a>
+      <a class='page-header__user-link page-header__user-link--tel' href='tel:+7(499)-784-684-46'>
+        <svg class="page-header__icon page-header__icon--phone" width="30" height="30">
+          <use xlink:href="img/sprite.svg#phone">
+          </use>
+        </svg>
+        +7(499)-784-684-46
+      </a>
     </div>
   </header>
   <main class='page-main'>
     <h1 class='page-main__title visually-hidden'>Сайт для поиска тура по Европе</h1>
     <section class='page-main__promo promo'>
       <div class='promo__container container'>
-        <h2 class='promo__title'>Путешествие по Европе</h2>
-        <p class='promo__text'>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-        <a class='promo__button button' href='#see-tour'>Смотреть тур</a>
+        <div class='promo__content'>
+          <h2 class='promo__title'>Путешествие по Европе</h2>
+          <p class='promo__text'>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+          <a class='promo__button button' href='#see-tour'>Смотреть тур</a>
+        </div>
       </div class='promo__container container'>
     </section>
     <section class='page-main__places places'>
       <div class='places__container container'>
-        <h2 class='places__title'>Места посещения</h2>
+        <h2 class='places__title' id='travel-places'>Места посещения</h2>
         <p class='places__description'>Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         <ul class='places__list'>
           <li class='places__item place-card'>
@@ -53,6 +61,9 @@
                 <img class='place-card__image' src='img/greece-desktop.jpg' srcset='img/greece-desktop@2x.jpg 2x' alt='Вилла на большой столбчатой отвесной скале' width='350' height='430'>
               </picture>
             </div>
+            <div class='place-card__mask'>
+              <a class='place-card__link-more' href='#greece'>Смотреть подробнее</a>
+            </div>
           </li>
           <li class='places__item place-card'>
             <h3 class='place-card__name'>Албания</h3>
@@ -60,6 +71,9 @@
               <picture>
                 <img class='place-card__image' src='img/albania-desktop.jpg' srcset='img/albania-desktop@2x.jpg 2x' alt='Вид сверху на песчаный пляж и море' width='350' height='430'>
               </picture>
+            </div>
+            <div class='place-card__mask'>
+              <a class='place-card__link-more' href='#albania'>Смотреть подробнее</a>
             </div>
           </li>
           <li class='places__item place-card'>
@@ -69,6 +83,9 @@
                 <img class='place-card__image' src='img/macedonia-desktop.jpg' srcset='img/macedonia-desktop@2x.jpg 2x' alt='Старая кирпичная церковь на берегу моря' width='350' height='430'>
               </picture>
             </div>
+            <div class='place-card__mask'>
+              <a class='place-card__link-more' href='#macedonia'>Смотреть подробнее</a>
+            </div>
           </li>
           <li class='places__item place-card'>
             <h3 class='place-card__name'>Черногория</h3>
@@ -76,6 +93,9 @@
               <picture>
                 <img class='place-card__image' src='img/montenegro-desktop.jpg' srcset='img/montenegro-desktop@2x.jpg 2x' alt='Вид сверху на голубую реку посреди леса' width='350' height='430'>
               </picture>
+            </div>
+            <div class='place-card__mask'>
+              <a class='place-card__link-more' href='#montenegro'>Смотреть подробнее</a>
             </div>
           </li>
           <li class='places__item place-card'>
@@ -85,11 +105,14 @@
                 <img class='place-card__image' src='img/croatia-desktop.jpg' srcset='img/croatia-desktop@2x.jpg 2x' alt='Фото около подземного озера внутри пещеры' width='350' height='430'>
               </picture>
             </div>
+            <div class='place-card__mask'>
+              <a class='place-card__link-more' href='#croatia'>Смотреть подробнее</a>
+            </div>
           </li>
         </ul>
       </div>
     </section>
-    <section class='page-main__places-tabs places-tabs'>
+    <section class='page-main__places-tabs places-tabs' id='see-tour'>
       <div class='places-tabs__container container'>
         <ul class='places-tabs__list tab-list'>
           <li class='tab-list__item tab-list__item--active'>
@@ -108,7 +131,7 @@
             <a class='tab-list__link'href="#">Хорватия</a>
           </li>
         </ul>
-        <div class='places-tabs__tab-content country-info country-info--current' id='#greece'>
+        <div class='places-tabs__tab-content country-info country-info--current' id='greece'>
           <div class='country-info__summary summary'>
             <div class='summary__route route'>
               <h2 class='route__title'>Греция</h2>
@@ -134,7 +157,7 @@
             </div>
           </div>
         </div>
-        <div class='places-tabs__tab-content country-info' id='#albania'>
+        <div class='places-tabs__tab-content country-info' id='albania'>
           <div class='country-info__summary summary'>
             <div class='summary__route route'>
               <h2 class='route__title'>Албания</h2>
@@ -160,7 +183,7 @@
             </div>
           </div>
         </div>
-        <div class='places-tabs__tab-content country-info' id='#macedonia'>
+        <div class='places-tabs__tab-content country-info' id='macedonia'>
           <div class='country-info__summary summary'>
             <div class='summary__route route'>
               <h2 class='route__title'>Македония</h2>
@@ -186,7 +209,7 @@
             </div>
           </div>
         </div>
-        <div class='places-tabs__tab-content country-info' id='#montenegro'>
+        <div class='places-tabs__tab-content country-info' id='montenegro'>
           <div class='country-info__summary summary'>
             <div class='summary__route route'>
               <h2 class='route__title'>Черногория</h2>
@@ -240,11 +263,17 @@
         </div>
         <div class='places-tabs__rates rates'>
           <div class='rates__info'>
-            <h2 class='rates__title'>Цены</h2>
+            <h2 class='rates__title' id='prices'>Цены</h2>
             <p class='rates__description'>Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
             <div class='rates__contact-us contact-us'>
               <span class='contact-us__text'>Свяжитесь с нами</span>
-              <a class='contact-us__tel' href='tel:+7(499)-784-684-46'>+7 (499)-784-684-46</a>
+              <a class='contact-us__link contact-us__link--tel' href='tel:+7(499)-784-684-46'>
+                <svg class="contact-us__icon contact-us__icon--phone" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#phone-orange">
+                  </use>
+                </svg>
+                +7 (499)-784-684-46
+              </a>
             </div>
           </div>
           <ul class='rates__list price-options'>
@@ -279,15 +308,22 @@
     </section>
     </section>
     <section class='page-main__feedback feedback'>
-      <div class='feedback__containter container'>
-        <form class='feedback__form question-form' action="post">
-          <h3 class='question-form__title'>У Вас остались вопросы?</h3>
-          <p class='question-form__description'>Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <input class='question-form__input' type='tel' name='tel' placeholder='Введите 10 цифр номера'>
-          <label for='tel'></label>
-          <input class='question-form__input' type='email' name='email'>
-          <label for='email'></label>
-          <button class='question-form__button button' type='submit'>Отправить</button>
+      <div class='feedback__container container'>
+        <form class='feedback__form form form--question' action="post">
+          <div class='form__wrapper'>
+            <h3 class='form__title'>У Вас остались вопросы?</h3>
+            <p class='form__description'>Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+            <div class='form__input-wrapper form__input-wrapper--tel'>
+              <label class='form__label form__label--tel' for='tel'></label>
+              <input class='form__input form__input--tel' type='tel' name='tel' placeholder='Введите 10 цифр номера' required>
+              <span class='form__input-required-icon' aria-label="Обязательное поле">*</span>
+            </div>
+            <div class='form__input-wrapper form__input-wrapper--email'>
+              <input class='form__input form__input--email' type='email' name='email' placeholder='Email'>
+              <label class='form__label form__label--email' for='email'></label>
+            </div>
+            <button class='form__button button button--form' type='submit'>Отправить</button>
+          </div>
         </form>
       </div>
     </section>
@@ -299,60 +335,80 @@
         <h3 class='future-trips__title'>Следующие путешествия</h3>
         <ul class='future-trips__list'>
           <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Марсель</a>
+            <ul class='future-trips__sub-list'>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Марсель</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Ним</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Монпелье</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Барселона</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Пальма</a>
+              </li>
+            </ul>
           </li>
           <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Ним</a>
+            <ul class='future-trips__sub-list'>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Сардиния</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Палермо</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Катания</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Неаполь</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Рим</a>
+              </li>
+            </ul>
           </li>
           <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Монпелье</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Барселона</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Пальма</a>
-          </li>
-        </ul>
-        <ul class='future-trips__list'>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Сардиния</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Палермо</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Катания</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Неаполь</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Рим</a>
-          </li>
-        </ul>
-        <ul class='future-trips__list'>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Корс</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Ницца</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Монако</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Динь-ле-Бен</a>
-          </li>
-          <li class='future-trips__item'>
-            <a class='future-trips__link' href='#'>Гренобль</a>
+            <ul class='future-trips__sub-list'>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Корс</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Ницца</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Монако</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Динь-ле-Бен</a>
+              </li>
+              <li class='future-trips__country-name'>
+                <a class='future-trips__link' href='#'>Гренобль</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
       <section class='page-footer__contacts contacts'>
         <h3 class='contacts__title'>Наши контакты</h3>
-        <a class='contacts__email' href='mailto:puteshestviemechta@gmail.ru'>puteshestviemechta@gmail.ru</a>
-        <a class='contacts__tel' href='tel:+7(499)-784-684-46'>+7 (499)-784-684-46</a>
+        <a class='contacts__link contacts__link--email' href='mailto:puteshestviemechta@gmail.ru'>
+          <svg class="contacts__icon contacts__icon--email" width="26" height="20">
+            <use xlink:href="img/sprite.svg#email">
+            </use>
+          </svg>
+          puteshestviemechta@gmail.ru
+        </a>
+        <a class='contacts__link contacts__link--phone' href='tel:+7(499)-784-684-46'>
+          <svg class="contacts__icon contacts__icon--phone" width="30" height="30">
+            <use xlink:href="img/sprite.svg#grey-phone">
+            </use>
+          </svg>
+          +7 (499)-784-684-46
+        </a>
       </section>
       <section class='page-footer__corporate-trips corporate-trips'>
         <h3 class='corporate-trips__title'>Корпоративные путешествия</h3>
@@ -360,5 +416,33 @@
       </section>
     </div>
   </footer>
+
+  <div class='modal modal--buy'>
+    <form class='form form--buy' action="post">
+      <div class='form__wrapper'>
+        <h3 class='form__title'>Купить тур</h3>
+        <p class='form__description'>Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+        <div class='form__input-wrapper form__input-wrapper--tel'>
+          <label class='form__label form__label--tel' for='tel'></label>
+          <input class='form__input form__input--tel' type='tel' name='tel' placeholder='Введите 10 цифр номера' required>
+          <span class='form__input-required-icon' aria-label="Обязательное поле">*</span>
+        </div>
+        <div class='form__input-wrapper form__input-wrapper--email'>
+          <input class='form__input form__input--email' type='email' name='email' placeholder='Email'>
+          <label class='form__label form__label--email' for='email'></label>
+        </div>
+        <button class='form__button button button--form' type='submit'>Отправить</button>
+        <button class='form__button button button--close'></button>
+      </div>
+    </form>
+  </div>
+
+  <div class='modal modal--success'>
+    <div class='modal__wrapper'>
+      <p class='modal__success-text'>Форма успешно отправлена, спасибо! :)</p>
+      <button class='modal__button button button--close'></button>
+    </div>
+  </div>
+  <script src='js/script.js'></script>
 </body>
 </html>

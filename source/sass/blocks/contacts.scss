@@ -1,0 +1,38 @@
+.contacts {
+  padding-left: 90px;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  color: $orange-main;
+
+  &--email {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 19px;
+  }
+
+  &--phone {
+    line-height: 32px;
+    text-decoration: underline;
+  }
+}
+
+.contacts__icon {
+  &--email {
+    margin-right: 15px;
+  }
+
+  &--phone {
+    margin-right: 11px;
+  }
+}

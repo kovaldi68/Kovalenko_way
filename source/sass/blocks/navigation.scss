@@ -6,16 +6,23 @@
 }
 
 .navigation__item {
-  margin-right: 40px;
-  font-weight: 500;
+  padding: 20px;
   font-size: 14px;
   line-height: 17px;
 
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover,
+  &:focus {
+    .navigation__link {
+      color: $orange-main;
+    }
+  }
 }
 
 .navigation__link {
+  font-weight: 500;
   color: $blue-darkest-text;
 }

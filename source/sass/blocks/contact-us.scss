@@ -12,24 +12,24 @@
   color: $blue-darkest-text;
 }
 
-.contact-us__tel {
-  position: relative;
-  color: $black-basic;
-  font-size: 20px;
-  line-height: 32px;
-  padding-left: 50px;
+.contact-us__link {
+  display: flex;
+  align-items: center;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    background-image: url('../img/icons/phone-orange.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30px;
-    transform: translateY(-50%);
+  &--tel {
+    color: $black-basic;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange-main;
+  }
+}
+
+.contact-us__icon {
+  &--phone {
+    margin-right: 20px;
   }
 }

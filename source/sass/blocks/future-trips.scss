@@ -1,0 +1,32 @@
+.future-trips {
+  padding-left: 12px;
+}
+
+.future-trips__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.future-trips__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.future-trips__item {
+  flex: 0 0 33.33333%;
+  padding-right: 5px;
+}
+
+.future-trips__sub-list {
+  @include list-reset;
+}
+
+.future-trips__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: $blue-darkest-text-opacity-50;
+}
