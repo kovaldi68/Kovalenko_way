@@ -7,8 +7,54 @@ const successModal = document.querySelector('.modal--success');
 const questionForm = document.querySelector('.form--question');
 const buyTourButtons = document.querySelectorAll('.buy-button');
 const closeModalButtons = document.querySelectorAll('.button--close');
-const userNumber = buyTourModal.querySelector('[name = user-tel]');
-const userMail = buyTourModal.querySelector('[name = user-email]');
+const userBuyNumber = buyTourModal.querySelector('[name = user-tel]');
+const userBuyMail = buyTourModal.querySelector('[name = user-email]');
+const userQuestionNumber = questionForm.querySelector('[name = user-tel]');
+const userQuestionMail = questionForm.querySelector('[name = user-email]');
+const tabs = document.querySelectorAll('.tab-list__link');
+const tabContentBlocks = document.querySelectorAll('.country-info');
+
+// const hideTabContent = () => {
+//   for (let i = 1; i < tabContentBlocks.length; i++) {
+//     tabContentBlocks[i].classList.add('country-info--hidden');
+//     tabs[i].classList.remove("tab-list__item--active");
+//   };
+// }
+
+// tabs.addEventListener('click', (evt) => {
+//   let target = evt.target;
+//   if (target.classList.contains('tab-list')) {
+//     console.log('Вкладка')
+//   }
+// })
+
+const onTabClickHandler = () => {
+  tabs.forEach(element => {
+    element.addEventListener('click', selectCountryTab)
+  })
+}
+
+const selectCountryTab = (evt) => {
+  evt.preventDefault();
+  if (evt.target) {
+    tabs.forEach(element => {
+      element.classList.remove('tab-list__link--active');
+    })
+    evt.target.classList.add('tab-list__link--active');
+    let tabName = evt.target.dataset.countryName;
+    selectTabContent(tabName);
+  }
+}
+
+const selectTabContent = (tabName) => {
+  tabContentBlocks.forEach(element => {
+    if (element.id == tabName) {
+      element.classList.add('country-info--active');
+    } else {
+      element.classList.remove('country-info--active');
+    }
+  })
+}
 
 let isStorageSupport = true;
 let storageNumber = '';
@@ -23,19 +69,29 @@ try {
 
 const storageData = () => {
   if (storageNumber && storageMail) {
-    userNumber.value = storageNumber;
-    userMail.value = storageMail;
+    userBuyNumber.value = storageNumber;
+    userBuyMail.value = storageMail;
   }
 }
 
-const forSubmitHandler = (evt) => {
+const buyFormSubmitHandler = (evt) => {
   evt.preventDefault();
   buyTourModalHandler();
   showUpSuccessModal();
 
   if (isStorageSupport) {
-    localStorage.setItem('userNumber', userNumber.value);
-    localStorage.setItem('userMail', userMail.value);
+    localStorage.setItem('userNumber', userBuyNumber.value);
+    localStorage.setItem('userMail', userBuyMail.value);
+  }
+}
+
+const questionFormSubmitHandler = (evt) => {
+  evt.preventDefault();
+  showUpSuccessModal();
+
+  if (isStorageSupport) {
+    localStorage.setItem('userNumber', userQuestionNumber.value);
+    localStorage.setItem('userMail', userQuestionMail.value);
   }
 }
 
@@ -135,7 +191,9 @@ window.addEventListener('resize', () => {
 });
 
 
-buyTourForm.addEventListener('submit', forSubmitHandler)
+buyTourForm.addEventListener('submit', buyFormSubmitHandler);
+questionForm.addEventListener('submit', questionFormSubmitHandler);
 countItems();
 buyTourButtonHandler();
 closeButtonHandler();
+onTabClickHandler();

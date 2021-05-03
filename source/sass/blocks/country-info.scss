@@ -2,15 +2,13 @@
   display: none;
   position: relative;
 
-  &--current {
+  &--active {
     display: flex;
     align-items: center;
   }
 
   @media (max-width: $tablet-width-max) {
-    &--current {
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
 }
 

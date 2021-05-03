@@ -19,10 +19,6 @@
   &:last-child {
     margin-right: 0;
   }
-
-  &--active .tab-list__link{
-    color: $orange-hover;
-  }
 }
 
 .tab-list__link {
@@ -32,6 +28,10 @@
   &:hover,
   &:focus,
   &:active {
+    color: $orange-hover;
+  }
+
+  &--active {
     color: $orange-hover;
   }
 }
