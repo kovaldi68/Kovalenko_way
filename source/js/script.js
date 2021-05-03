@@ -13,20 +13,7 @@ const userQuestionNumber = questionForm.querySelector('[name = user-tel]');
 const userQuestionMail = questionForm.querySelector('[name = user-email]');
 const tabs = document.querySelectorAll('.tab-list__link');
 const tabContentBlocks = document.querySelectorAll('.country-info');
-
-// const hideTabContent = () => {
-//   for (let i = 1; i < tabContentBlocks.length; i++) {
-//     tabContentBlocks[i].classList.add('country-info--hidden');
-//     tabs[i].classList.remove("tab-list__item--active");
-//   };
-// }
-
-// tabs.addEventListener('click', (evt) => {
-//   let target = evt.target;
-//   if (target.classList.contains('tab-list')) {
-//     console.log('Вкладка')
-//   }
-// })
+const placeCardLinks = document.querySelectorAll('.place-card__link-more');
 
 const onTabClickHandler = () => {
   tabs.forEach(element => {
@@ -54,6 +41,25 @@ const selectTabContent = (tabName) => {
       element.classList.remove('country-info--active');
     }
   })
+}
+
+const onCardLinkHandler = () => {
+  placeCardLinks.forEach(element => {
+    element.addEventListener('click', goToCountry)
+  })
+}
+
+const goToCountry = (evt) => {
+  let linkName = evt.target.getAttribute('href').substr(1);
+
+  tabs.forEach(element => {
+    element.classList.remove('tab-list__link--active');
+    if (linkName == element.id) {
+      element.classList.add('tab-list__link--active');
+    }
+  })
+  let tabName = evt.target.dataset.countryName;
+  selectTabContent(tabName);
 }
 
 let isStorageSupport = true;
@@ -197,3 +203,4 @@ countItems();
 buyTourButtonHandler();
 closeButtonHandler();
 onTabClickHandler();
+onCardLinkHandler();
