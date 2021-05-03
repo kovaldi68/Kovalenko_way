@@ -8,7 +8,12 @@
 
   @media (max-width: $tablet-width-max) {
     background-image: none;
+    overflow: hidden;
   }
+}
+
+.places-tabs__container {
+  padding-right: 0;
 }
 
 .places-tabs__list {
