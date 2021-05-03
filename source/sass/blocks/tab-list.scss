@@ -2,10 +2,10 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 95px;
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 1170px;
+  max-width:fit-content;
+  border-bottom: 1px solid $blue-dark-main-opacity-30;
 }
 
 .tab-list__item {
@@ -14,6 +14,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  letter-spacing: -0.415px;
 
   &:last-child {
     margin-right: 0;

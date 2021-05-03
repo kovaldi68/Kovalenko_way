@@ -1,5 +1,12 @@
 .route {
   width: 31.6%;
+
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .route__title {
@@ -20,6 +27,17 @@
     height: 3px;
     background-color: $orange-main;
   }
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 45px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .route__text {
@@ -27,8 +45,18 @@
   margin-bottom: 50px;
   color: $blue-dark-main-opacity-70;
   letter-spacing: -0.47px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 .route__buy-button {
   min-width: 250px;
+  padding: 19px 52px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 2px;
 }

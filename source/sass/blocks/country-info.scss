@@ -3,6 +3,51 @@
   position: relative;
 
   &--current {
-    display: block;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    &--current {
+      flex-direction: column;
+    }
+  }
+}
+
+.country-info__route {
+  margin-right: 100px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.country-info__photo {
+  height: 596px;
+  max-width: 430px;
+
+  @media (max-width: $tablet-width-max) {
+    height: 415px;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.country-info__image {
+  width: 100%;
+}
+
+.country-info__feedback {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: $tablet-width-max) {
+    right: 50%;
+    top: auto;
+    bottom: -32px;
+    transform: translateX(50%);
   }
 }

@@ -1,9 +1,22 @@
 .places {
   padding-top: 199px;
   padding-bottom: 50px;
+
+  @media (max-width: $tablet-width-max) {
+    padding-top: 80px;
+  }
+}
+
+.places__container {
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .places__title {
+  margin: 0;
   position: relative;
   margin-bottom: 34px;
   padding-bottom: 30px;
@@ -11,6 +24,7 @@
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
+  letter-spacing: -1.25px;
 
   &::before {
     content: '';
@@ -21,12 +35,29 @@
     height: 4px;
     background-color: $orange-main;
   }
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: unset;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .places__description {
   margin-bottom: 56px;
   max-width: 328px;
   letter-spacing: -0.47px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 }
 
 .places__list {
@@ -35,6 +66,10 @@
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 100px;
+
+  @media (max-width: $tablet-width-max) {
+    row-gap: 20px;
+  }
 }
 
 .places__item {
@@ -46,5 +81,17 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    margin-right: 29px;
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n+3) {
+      margin-right: 29px;
+    }
   }
 }

@@ -22,14 +22,8 @@
   }
 
   &--buy {
-    position: absolute;
-    width: 38vw;
-    height: 35vh;
+    height: 100%;
     background-color: $grey;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    transform: translate(-50%, -50%);
 
     .form__wrapper {
       flex-direction: column;

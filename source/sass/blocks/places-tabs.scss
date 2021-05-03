@@ -5,4 +5,20 @@
   background-repeat: no-repeat;
   background-position: center 200px;
   background-size: 1444px 1089px;
+
+  @media (max-width: $tablet-width-max) {
+    background-image: none;
+  }
+}
+
+.places-tabs__list {
+  margin-bottom: 95px;
+}
+
+.places-tabs__tab-content {
+  margin-bottom: 239px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 112px;
+  }
 }

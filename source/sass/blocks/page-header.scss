@@ -32,6 +32,10 @@
   &:focus {
     color: $orange-main;
   }
+
+  @media (max-width: $tablet-width-max) {
+    display: none;
+  }
 }
 
 .page-header__icon {
