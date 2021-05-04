@@ -1,5 +1,14 @@
 .corporate-trips {
   padding-left: 49px;
+
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 30px;
+    border-top: 1px solid $grey-decoration;
+  }
 }
 
 .corporate-trips__title {
@@ -16,4 +25,9 @@
   font-size: 14px;
   line-height: 24px;
   color: $blue-darkest-text-opacity-50;
+
+  @media (max-width: $tablet-width-max) {
+    text-align: center;
+    width: 97%;
+  }
 }

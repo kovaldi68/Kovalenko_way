@@ -17,6 +17,8 @@
   background-position: 16% center;
 
   @media (max-width: $tablet-width-max) {
+    padding-left: 7.17vw;
+    padding-right: 7.17vw;
     background-image: url('../img/form-sunset-tablet.jpg');
     padding-bottom: 75px;
     background-position: center;

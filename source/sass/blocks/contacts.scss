@@ -1,5 +1,11 @@
 .contacts {
   padding-left: 90px;
+  border-right: 1px solid $grey-decoration;
+
+  @media (max-width: $tablet-width-max) {
+    padding-left: 50px;
+    border-right: none;
+  }
 }
 
 .contacts__title {

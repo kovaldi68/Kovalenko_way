@@ -1,6 +1,26 @@
+.page-footer {
+  padding-top: 70px;
+  padding-bottom: 81px;
+
+  @media (max-width: $tablet-width-max) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
 .page-footer__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 70px;
-  padding-bottom: 81px;
+
+  @media (max-width: $tablet-width-max) {
+    grid-template-columns: 55% 45%;
+    row-gap: 30px;
+  }
+}
+
+.page-footer__corporate-trips {
+  @media (max-width: $tablet-width-max) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }

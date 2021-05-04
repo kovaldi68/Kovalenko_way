@@ -1,5 +1,10 @@
 .future-trips {
   padding-left: 12px;
+  border-right: 1px solid $grey-decoration;
+
+  @media (max-width: $tablet-width-max) {
+    padding-left: 0;
+  }
 }
 
 .future-trips__title {

@@ -19,6 +19,11 @@
         margin-right: 19px;
       }
     }
+
+    @media (max-width: $tablet-width-max) {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   &--buy {
