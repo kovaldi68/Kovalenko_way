@@ -136,17 +136,6 @@
 .form__label {
   &--tel {
     position: relative;
-
-    &::before {
-      content: '+7';
-      position: absolute;
-      top: 51%;
-      left: 26px;
-      font-size: 14px;
-      line-height: 17px;
-      color: $blue-darkest-text;
-      transform: translateY(-50%);
-    }
   }
 }
 
@@ -158,6 +147,19 @@
 
   &--tel {
     padding-left: 51px;
+
+    & + label {
+      &::before {
+        content: '+7';
+        position: absolute;
+        top: 51%;
+        left: 26px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $blue-darkest-text;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   &::placeholder {
@@ -166,7 +168,7 @@
     color: $blue-darkest-text;
   }
 
-  &:required + span {
+  &:required ~ span {
     position: absolute;
     top: 5px;
     left: 15px;
@@ -174,6 +176,22 @@
     font-size: 17px;
     line-height: 21px;
     color: $orange-main;
+  }
+
+  &:invalid {
+    border: 1px solid $orange-main;
+
+    & + label {
+      &::after {
+        content: 'Данные не верны';
+        position: absolute;
+        top: -15px;
+        left: 0;
+        font-size: 12px;
+        line-height: 15px;
+        color: $orange-main;
+      }
+    }
   }
 }
 

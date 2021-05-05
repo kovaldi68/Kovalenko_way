@@ -4,7 +4,8 @@
   align-items: center;
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .place-card__mask {
       position: absolute;
       display: flex;
@@ -64,4 +65,10 @@
   line-height: 17px;
   letter-spacing: 2px;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $white-basic;
+    color: $white-basic;
+  }
 }
