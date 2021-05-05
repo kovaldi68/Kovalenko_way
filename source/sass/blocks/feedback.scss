@@ -6,6 +6,11 @@
     padding-top: 15px;
     padding-bottom: 40px;
   }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
 }
 
 .feedback__container {
@@ -19,8 +24,17 @@
   @media (max-width: $tablet-width-max) {
     padding-left: 7.17vw;
     padding-right: 7.17vw;
-    background-image: url('../img/form-sunset-tablet.jpg');
     padding-bottom: 75px;
+    background-image: url('../img/form-sunset-tablet.jpg');
     background-position: center;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-image: none;
+    background-color: $grey;
   }
 }

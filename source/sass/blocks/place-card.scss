@@ -15,6 +15,10 @@
       background-color: $blue-darkest-text-opacity-60;
     }
   }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+  }
 }
 
 .place-card__name {
@@ -40,6 +44,10 @@
   @media (max-width: $tablet-width-max) {
     height: 425px;
     max-width: 288px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
   }
 }
 

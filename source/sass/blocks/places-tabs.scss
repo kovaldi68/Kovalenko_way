@@ -9,15 +9,33 @@
   @media (max-width: $tablet-width-max) {
     background-image: none;
     overflow: hidden;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 10px;
+    padding-bottom: 25px;
   }
 }
 
 .places-tabs__container {
-  padding-right: 0;
+  @media (max-width: $tablet-width-max) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .places-tabs__list {
   margin-bottom: 95px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-left: 37px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 24px;
+    margin-left: 16px;
+  }
 }
 
 .places-tabs__tab-content {
@@ -25,5 +43,9 @@
 
   @media (max-width: $tablet-width-max) {
     margin-bottom: 112px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 111px;
   }
 }

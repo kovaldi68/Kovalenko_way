@@ -26,6 +26,11 @@
     padding-left: 48px;
     padding-right: 48px;
     min-width: 176px;
+
+    @media (max-width: $mobile-width-max) {
+      width: 100%;
+      max-width: 500px;
+    }
   }
 
   &--close {

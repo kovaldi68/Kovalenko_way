@@ -14,6 +14,35 @@ const userQuestionMail = questionForm.querySelector('[name = user-email]');
 const tabs = document.querySelectorAll('.tab-list__link');
 const tabContentBlocks = document.querySelectorAll('.country-info');
 const placeCardLinks = document.querySelectorAll('.place-card__link-more');
+const menuToggle = document.querySelector('.page-header__toggle');
+const header = document.querySelector('.page-header');
+
+
+//header
+
+header.classList.remove("page-header--nojs");
+
+const onMenuHandler = (evt) => {
+  evt.preventDefault();
+  const headerHeight = header.offsetHeight;
+
+  if (header.classList.contains("page-header--opened")) {
+    header.classList.remove("page-header--opened")
+    document.body.style.paddingTop = 0;
+  } else {
+    header.classList.add("page-header--opened")
+    document.body.style.paddingTop = `${headerHeight}px`;
+  }
+};
+
+const closeHeader = () => {
+  if (mediaDesktop.matches) {
+    document.body.style.paddingTop = 0;
+    header.classList.remove("page-header--opened");
+  }
+}
+
+//tabs
 
 const onTabClickHandler = () => {
   tabs.forEach(element => {
@@ -62,6 +91,8 @@ const goToCountry = (evt) => {
   selectTabContent(tabName);
 }
 
+//localstoage
+
 let isStorageSupport = true;
 let storageNumber = '';
 let storageMail = '';
@@ -79,6 +110,8 @@ const storageData = () => {
     userBuyMail.value = storageMail;
   }
 }
+
+//forms
 
 const buyFormSubmitHandler = (evt) => {
   evt.preventDefault();
@@ -145,20 +178,6 @@ const onBuyTourEscHandler = (evt) => {
   }
 }
 
-const countItems = () => {
-  const itemsList = document.querySelectorAll('.places__item');
-  const lastItem = itemsList.length - 1;
-
-  if (mediaDesktop.matches) {
-    if (itemsList.length % 3 == 2) {
-
-      itemsList[lastItem].style.marginLeft = 60 + 'px';
-    }
-  } else {
-    itemsList[lastItem].style.marginLeft = 0;
-  }
-}
-
 const buyTourButtonHandler = () => {
   for (let button of buyTourButtons) {
     button.addEventListener('click', (evt) => {
@@ -192,6 +211,22 @@ const showUpSuccessModal = () => {
   document.addEventListener('click', onSuccessClickHandler)
 }
 
+//padding for place-cards
+
+const countItems = () => {
+  const itemsList = document.querySelectorAll('.places__item');
+  const lastItem = itemsList.length - 1;
+
+  if (mediaDesktop.matches) {
+    if (itemsList.length % 3 == 2) {
+
+      itemsList[lastItem].style.marginLeft = 60 + 'px';
+    }
+  } else {
+    itemsList[lastItem].style.marginLeft = 0;
+  }
+}
+
 window.addEventListener('resize', () => {
   countItems();
 });
@@ -199,8 +234,10 @@ window.addEventListener('resize', () => {
 
 buyTourForm.addEventListener('submit', buyFormSubmitHandler);
 questionForm.addEventListener('submit', questionFormSubmitHandler);
+menuToggle.addEventListener('click', onMenuHandler);
 countItems();
 buyTourButtonHandler();
 closeButtonHandler();
 onTabClickHandler();
 onCardLinkHandler();
+closeHeader();

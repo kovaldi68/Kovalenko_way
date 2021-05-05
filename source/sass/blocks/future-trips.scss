@@ -5,6 +5,15 @@
   @media (max-width: $tablet-width-max) {
     padding-left: 0;
   }
+
+  @media (max-width: $mobile-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-right: 0;
+    border-bottom: 1px solid $grey-decoration;
+  }
 }
 
 .future-trips__title {
@@ -13,17 +22,34 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .future-trips__list {
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $mobile-width-max) {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .future-trips__item {
-  flex: 0 0 33.33333%;
+  width: 33.333%;
+  min-width: 99.5px;
   padding-right: 5px;
+
+  @media (max-width: $mobile-width-max) {
+    text-align: center;
+    width: 50%;
+    padding: 0;
+  }
 }
 
 .future-trips__sub-list {

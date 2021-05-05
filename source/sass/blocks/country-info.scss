@@ -9,7 +9,6 @@
 
   @media (max-width: $tablet-width-max) {
     flex-direction: column;
-    padding-right: 21px;
   }
 }
 
@@ -48,5 +47,9 @@
     top: auto;
     bottom: -32px;
     transform: translateX(50%);
+  }
+
+  @media (max-width: $mobile-width-max) {
+    bottom: -66px;
   }
 }

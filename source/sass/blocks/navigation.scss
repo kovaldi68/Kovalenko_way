@@ -3,6 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: 53px;
+
+  @media (max-width: $tablet-width-max) {
+    width: 100%;
+    flex-direction: column;
+    margin-right: 0;
+  }
 }
 
 .navigation__item {
@@ -18,6 +24,21 @@
   &:focus {
     .navigation__link {
       color: $orange-main;
+    }
+  }
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: $grey;
+    font-size: 20px;
+    line-height: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

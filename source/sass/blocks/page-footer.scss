@@ -6,6 +6,11 @@
     padding-top: 40px;
     padding-bottom: 50px;
   }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 70px;
+    padding-bottom: 25px;
+  }
 }
 
 .page-footer__container {
@@ -15,6 +20,13 @@
   @media (max-width: $tablet-width-max) {
     grid-template-columns: 55% 45%;
     row-gap: 30px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 0;
   }
 }
 

@@ -10,6 +10,7 @@
   @media (max-width: $tablet-width-max) {
     flex-wrap: nowrap;
     overflow-y: scroll;
+    white-space: nowrap;
   }
 }
 

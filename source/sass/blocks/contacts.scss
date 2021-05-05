@@ -1,10 +1,21 @@
 .contacts {
   padding-left: 90px;
+  padding-right: 20px;
   border-right: 1px solid $grey-decoration;
 
   @media (max-width: $tablet-width-max) {
     padding-left: 50px;
+    padding-right: 0;
     border-right: none;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 19px;
   }
 }
 
@@ -14,6 +25,11 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .contacts__link {
@@ -30,6 +46,11 @@
   &--phone {
     line-height: 32px;
     text-decoration: underline;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    justify-content: center;
   }
 }
 
