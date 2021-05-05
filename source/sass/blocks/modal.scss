@@ -21,9 +21,39 @@
       margin: 0;
       font-weight: 500;
       font-size: 25px;
-      line-height: 170%;
+      line-height: 43px;
       color: $grey-dark-text;
       text-align: center;
+
+      @media (max-width: $mobile-width-max) {
+        width: 50%;
+      }
+    }
+  }
+
+  &--buy {
+    .modal__wrapper {
+      display: grid;
+      grid-template-columns: 46.4% 53.6%;
+      background-color: $grey;
+      background-image: url('../../img/modal-form-image.jpg');
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: contain;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url('../img/modal-form-image@2x.jpg');
+      }
+
+      @media (max-width: $mobile-width-max) {
+        display: flex;
+        background-image: none;
+      }
+    }
+
+    .modal__form {
+      grid-column-start: 2;
+      grid-column-end: -1;
     }
   }
 
@@ -37,7 +67,19 @@
   top: 50%;
   left: 50%;
   width: 38vw;
-  height: 35vh;
-  z-index: 100;
+  min-width: 728px;
+  height: 444px;
+  // height: 35.4vh;
+  z-index: $z-index-form;
   transform: translate(-50%, -50%);
+
+  @media (max-width: $tablet-width-max) {
+    width: 70%;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+    min-width: unset;
+    height: 568px;
+  }
 }

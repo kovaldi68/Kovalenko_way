@@ -20,17 +20,17 @@ const header = document.querySelector('.page-header');
 
 //header
 
-header.classList.remove("page-header--nojs");
+header.classList.remove('page-header--nojs');
 
 const onMenuHandler = (evt) => {
   evt.preventDefault();
   const headerHeight = header.offsetHeight;
 
-  if (header.classList.contains("page-header--opened")) {
-    header.classList.remove("page-header--opened")
+  if (header.classList.contains('page-header--opened')) {
+    header.classList.remove('page-header--opened')
     document.body.style.paddingTop = 0;
   } else {
-    header.classList.add("page-header--opened")
+    header.classList.add('page-header--opened')
     document.body.style.paddingTop = `${headerHeight}px`;
   }
 };
@@ -135,7 +135,7 @@ const questionFormSubmitHandler = (evt) => {
 }
 
 const isEscEvent = (evt) => {
-  return evt.key === ('Escape' ||  'Esc');
+  return evt.key === ('Escape' || 'Esc');
 };
 
 const successModalHandler = () => {
@@ -153,13 +153,13 @@ const buyTourModalHandler = () => {
 }
 
 const onSuccessClickHandler = (evt) => {
-  if (evt.target == document.querySelector('.modal')) {
+  if (evt.target == document.querySelector('.modal--success')) {
     successModalHandler();
   }
 }
 
 const onBuyTourClickHandler = (evt) => {
-  if (evt.target == document.querySelector('.modal')) {
+  if (evt.target == document.querySelector('.modal--buy')) {
     buyTourModalHandler();
   }
 }
