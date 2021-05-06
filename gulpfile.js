@@ -11,7 +11,7 @@ var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore")
+var svgsprite = require('gulp-svg-sprite');
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
@@ -69,8 +69,12 @@ gulp.task("webp", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/icons/*.svg")
-    .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename("sprite.svg"))
+    .pipe(svgsprite({
+        mode: {
+          stack: {sprite: "../sprite.svg"}
+        },
+      }
+    ))
     .pipe(gulp.dest("build/img"));
 });
 

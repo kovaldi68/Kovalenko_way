@@ -211,7 +211,7 @@ const showUpSuccessModal = () => {
   document.addEventListener('click', onSuccessClickHandler)
 }
 
-//padding for place-cards
+//margins for place-cards
 
 const countItems = () => {
   const itemsList = document.querySelectorAll('.places__item');
@@ -219,7 +219,6 @@ const countItems = () => {
 
   if (mediaDesktop.matches) {
     if (itemsList.length % 3 == 2) {
-
       itemsList[lastItem].style.marginLeft = 60 + 'px';
     }
   } else {
@@ -227,10 +226,7 @@ const countItems = () => {
   }
 }
 
-window.addEventListener('resize', () => {
-  countItems();
-});
-
+window.addEventListener('resize', countItems);
 
 buyTourForm.addEventListener('submit', buyFormSubmitHandler);
 questionForm.addEventListener('submit', questionFormSubmitHandler);

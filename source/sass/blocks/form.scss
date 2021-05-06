@@ -4,10 +4,14 @@
     width: 56%;
 
     @media (max-width: $tablet-width-max) {
-      width: 100%;
+      width: 90%;
       max-width: 739px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    @media (max-width: $mobile-width-max) {
+      width: 100%;
     }
 
     .form__wrapper {
@@ -35,10 +39,13 @@
         margin-right: 19px;
       }
 
+      @media (max-width: $tablet-width-max) {
+        margin-bottom: 20px;
+      }
+
       @media (max-width: $mobile-width-max) {
         width: 100%;
         max-width: 500px;
-        margin-bottom: 20px;
 
         &--tel {
           margin-right: 0;

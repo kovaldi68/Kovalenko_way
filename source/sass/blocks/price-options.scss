@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
@@ -67,7 +67,7 @@
     }
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     margin-right: 50px;
     padding: 0;
     width: calc((100% - 50px) / 2);
@@ -99,6 +99,10 @@
 
     &:last-child {
       margin-bottom: 0;
+
+      .price-options__advantages-list {
+        padding-bottom: 36px;
+      }
     }
   }
 }
@@ -109,7 +113,7 @@
   align-items: center;
   width: 100%;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     justify-content: flex-start;
     padding-top: 30px;
     padding-right: 20px;
@@ -127,7 +131,7 @@
   letter-spacing: -1.3px;
   color: $blue-darkest-text-opacity-70;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     margin-bottom: 10px;
     width: 100%;
     font-size: 24px;
@@ -144,7 +148,7 @@
   line-height: 34px;
   color: $blue-darkest-text-opacity-70;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     margin-bottom: 11px;
     width: 100%;
     text-align: center;
@@ -158,7 +162,7 @@
   line-height: 24px;
   border-bottom: 1px solid $blue-dark-main-opacity-30;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     padding-bottom: 10px;
     width: 100%;
     text-align: center;
@@ -170,7 +174,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     padding-top: 20px;
     padding-bottom: 30px;
   }
@@ -199,8 +203,13 @@
     background-position: center;
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     margin-bottom: 10px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    line-height: 31px;
   }
 }
 
@@ -208,7 +217,7 @@
   width: 100%;
   min-width: 220px;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tablet-desktop-middle) {
     padding-top: 19px;
     padding-bottom: 19px;
     font-weight: 500;

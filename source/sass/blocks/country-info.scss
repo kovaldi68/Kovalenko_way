@@ -19,6 +19,10 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 50px;
+  }
 }
 
 .country-info__photo {
@@ -39,7 +43,7 @@
 .country-info__feedback {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
 
   @media (max-width: $tablet-width-max) {

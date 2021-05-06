@@ -1,6 +1,5 @@
 .places {
   padding-top: 199px;
-  padding-bottom: 50px;
 
   @media (max-width: $tablet-width-max) {
     padding-top: 80px;
@@ -109,12 +108,12 @@
     margin-right: 30px;
     margin-bottom: 20px;
 
-    &:nth-child(2n+2) {
+    &:nth-child(even) {
       margin-right: 0;
     }
 
     &:nth-child(3n+3) {
-      margin-right: 29px;
+      margin-right: 30px;
     }
   }
 

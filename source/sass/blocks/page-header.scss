@@ -1,10 +1,11 @@
 .page-header {
   position: relative;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 36px;
+  padding-bottom: 31px;
 
   @media (max-width: $tablet-width-max) {
     padding-bottom: 14px;
+    padding-top: 19px;
 
     &--nojs {
       padding-top: 134px;
@@ -103,7 +104,7 @@
 .page-header__user-link {
   display: flex;
   align-items: center;
-  margin-right: 11px;
+  margin-right: 15px;
 
   &--tel {
     font-size: 18px;
@@ -124,7 +125,7 @@
 
 .page-header__icon {
   &--phone {
-    margin-right: 6px;
+    margin-right: 18px;
   }
 }
 
@@ -138,7 +139,7 @@
     top: 0;
     right: 0;
     height: 50px;
-    width: 6.5%;
+    width: 72px;
     max-width: 70px;
     background-image: url("../img/icons/burger.svg");
     background-repeat: no-repeat;
@@ -147,6 +148,6 @@
   }
 
   @media (max-width: $mobile-width-max) {
-    width: 15.6%;
+    width: 50px;
   }
 }

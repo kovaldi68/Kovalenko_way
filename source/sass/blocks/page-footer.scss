@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile-width-max) {
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 25px;
   }
 }
@@ -18,16 +18,20 @@
   grid-template-columns: 1fr 1fr 1fr;
 
   @media (max-width: $tablet-width-max) {
-    grid-template-columns: 55% 45%;
-    row-gap: 30px;
+    grid-template-columns: 54.5% 45.5%;
   }
 
   @media (max-width: $mobile-width-max) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    row-gap: 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}
+
+.page-footer__future-trips {
+  margin-bottom: 20px;
 }
 
 .page-footer__corporate-trips {

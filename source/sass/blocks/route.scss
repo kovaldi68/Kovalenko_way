@@ -19,11 +19,12 @@
 .route__title {
   position: relative;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 23px;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 55px;
   line-height: 90px;
+  letter-spacing: -1.25px;
 
   &::before {
     content: "";
@@ -40,6 +41,7 @@
     padding: 0;
     font-size: 30px;
     line-height: 45px;
+    letter-spacing: unset;
 
     &::before {
       display: none;
@@ -54,7 +56,7 @@
 
 .route__text {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 31px;
   color: $blue-dark-main-opacity-70;
   letter-spacing: -0.47px;
 
@@ -66,13 +68,22 @@
 
 .route__buy-button {
   min-width: 250px;
-  padding: 19px 52px;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
+  padding: 30px 39px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
   letter-spacing: 2px;
 
+  @media (max-width: $tablet-width-max) {
+    padding: 19px 52px;
+    max-width: 350px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   @media (max-width: $mobile-width-max) {
+    padding: 19px 52px;
     width: 100%;
     max-width: 350px;
   }

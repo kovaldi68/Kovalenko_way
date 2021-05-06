@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $tablet-desktop-middle) {
     flex-direction: column;
     align-items: center;
   }
@@ -16,7 +16,7 @@
   line-height: 34px;
   color: $blue-darkest-text;
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $tablet-desktop-middle) {
     margin-bottom: 10px;
     padding-left: 0;
     font-size: 18px;
@@ -38,7 +38,7 @@
     color: $orange-main;
   }
 
-  @media (max-width: $tablet-width-max) {
+  @media (max-width: $tablet-desktop-middle) {
     &--tel {
       color: $orange-main;
       font-size: 18px;
