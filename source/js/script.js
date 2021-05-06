@@ -64,7 +64,7 @@ const selectCountryTab = (evt) => {
 
 const selectTabContent = (tabName) => {
   tabContentBlocks.forEach(element => {
-    if (element.id == tabName) {
+    if (element.id === tabName) {
       element.classList.add('country-info--active');
     } else {
       element.classList.remove('country-info--active');
@@ -153,13 +153,13 @@ const buyTourModalHandler = () => {
 }
 
 const onSuccessClickHandler = (evt) => {
-  if (evt.target == document.querySelector('.modal--success')) {
+  if (evt.target === document.querySelector('.modal--success')) {
     successModalHandler();
   }
 }
 
 const onBuyTourClickHandler = (evt) => {
-  if (evt.target == document.querySelector('.modal--buy')) {
+  if (evt.target === document.querySelector('.modal--buy')) {
     buyTourModalHandler();
   }
 }
@@ -198,7 +198,7 @@ const closeButtonHandler = () => {
 const showUpBuyTourModal = () => {
   buyTourModal.classList.add('modal--opened');
   storageData();
-  userNumber.focus();
+  userBuyNumber.focus();
 
   document.addEventListener('keydown', onBuyTourEscHandler);
   document.addEventListener('click', onBuyTourClickHandler);

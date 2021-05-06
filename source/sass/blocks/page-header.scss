@@ -41,7 +41,7 @@
       height: 500px;
       background-color: $white-basic;
       z-index: $z-index-page-header;
-      box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+      box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
 
       .page-header__logo {
         display: none;
@@ -59,7 +59,7 @@
 
       .page-header__toggle {
         background-color: transparent;
-        background-image: url('../img/icons/modal-cross.svg');
+        background-image: url("../img/icons/modal-cross.svg");
         background-size: 22px;
       }
     }
@@ -140,7 +140,7 @@
     height: 50px;
     width: 6.5%;
     max-width: 70px;
-    background-image: url('../img/icons/burger.svg');
+    background-image: url("../img/icons/burger.svg");
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: center;

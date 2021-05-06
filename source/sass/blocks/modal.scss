@@ -6,7 +6,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 
   &--success {
     .modal__wrapper {
@@ -36,13 +36,13 @@
       display: grid;
       grid-template-columns: 46.4% 53.6%;
       background-color: $grey;
-      background-image: url('../../img/modal-form-image.jpg');
+      background-image: url("../img/modal-form-image.jpg");
       background-repeat: no-repeat;
       background-position: top left;
       background-size: contain;
 
       @media (min-resolution: 2dppx) {
-        background-image: url('../img/modal-form-image@2x.jpg');
+        background-image: url("../img/modal-form-image@2x.jpg");
       }
 
       @media (max-width: $mobile-width-max) {
@@ -69,12 +69,12 @@
   width: 38vw;
   min-width: 728px;
   height: 444px;
-  // height: 35.4vh;
   z-index: $z-index-form;
   transform: translate(-50%, -50%);
 
   @media (max-width: $tablet-width-max) {
     width: 70%;
+    max-width: 535px;
   }
 
   @media (max-width: $mobile-width-max) {

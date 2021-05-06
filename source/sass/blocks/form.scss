@@ -144,22 +144,12 @@
   min-width: 190px;
   padding: 16px 15px 15px 15px;
   border: 1px solid $blue-dark-main-opacity-30;
+  outline-style: none;
 
-  &--tel {
-    padding-left: 51px;
-
-    & + label {
-      &::before {
-        content: '+7';
-        position: absolute;
-        top: 51%;
-        left: 26px;
-        font-size: 14px;
-        line-height: 17px;
-        color: $blue-darkest-text;
-        transform: translateY(-50%);
-      }
-    }
+  &:focus {
+    outline-style: solid;
+    outline-color: $blue-dark-main;
+    outline-width: thin;
   }
 
   &::placeholder {
@@ -183,13 +173,30 @@
 
     & + label {
       &::after {
-        content: 'Данные не верны';
+        content: "Данные не верны";
         position: absolute;
         top: -15px;
         left: 0;
         font-size: 12px;
         line-height: 15px;
         color: $orange-main;
+      }
+    }
+  }
+
+  &--tel {
+    padding-left: 51px;
+
+    & + label {
+      &::before {
+        content: "+7";
+        position: absolute;
+        top: 51%;
+        left: 26px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $blue-darkest-text;
+        transform: translateY(-50%);
       }
     }
   }

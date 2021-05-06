@@ -16,17 +16,18 @@
 .feedback__container {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-image: url('../img/form-sunset-desktop.jpg');
+  background-image: url("../img/form-sunset-desktop.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 16% center;
 
   @media (max-width: $tablet-width-max) {
-    padding-left: 7.17vw;
-    padding-right: 7.17vw;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 75px;
-    background-image: url('../img/form-sunset-tablet.jpg');
+    background-image: url("../img/form-sunset-tablet.jpg");
     background-position: center;
+    background-size: cover;
   }
 
   @media (max-width: $mobile-width-max) {
